@@ -1,0 +1,42 @@
+{% extends "base.html" %}  {% block content %}
+
+<form action="{{url_for('register')}}" method="POST">
+    <p>First Name</p><br>
+    <input type="text" name="first_name">
+
+    <p>Last Name</p><br>
+    <input type="text" name="last_name">
+
+    <p>Email</p><br>
+    <input type="email" name="email"><br>
+
+    <input type="radio" name="sex" value="Male">Male<br>
+    <input type="radio" name="sex" value="Female">Female<br>
+
+    <select name="programme">
+
+        <option value="National Diploma - Regular">National Diploma - Regular</option>
+        <option value="National Diploma - Part Time">National Diploma - Part Time</option>
+        <option value="Higher National Diploma - Regular">Higher National Diploma - Regular</option>
+        <option value="Higher National Diploma - Part Time">Higher National Diploma - Part Time</option>
+    </select>
+
+
+    <select name="faculty">
+        <option value="School of Business Management Tech">School of Business Management Tech</option>
+        <option value="School of Engineering Tech">School of Engineering Tech</option>
+        <option value="School of Humanities and Social Sciences">School of Humanities and Social Sciences</option>
+        <option value="School of Industrial and Applied Sciences">School of Industrial and Applied Sciences</option>
+        <option value="School of Environmental Design Tech">School of Environmental Design Tech</option>
+    </select>
+
+    <p>Department</p>
+    <input type="text" name="department"><br>
+
+    <p>Admission Year</p><br>
+    <input type="text" name="admission_year">
+
+<input type="submit" value="Register">
+</form>
+
+{% endblock %}

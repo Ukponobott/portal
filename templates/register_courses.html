@@ -1,0 +1,20 @@
+{% extends"base.html" %}   {% block content %}
+
+<h1>Register courses</h1>
+
+<form>
+{% for course in courses%}
+
+ <input type="checkbox" name="course" value="{{course}}">{{course}}<br>
+
+{% endfor %}
+    <input type="submit" value="Submit">
+</form>
+
+<form method="POST" action={{"url_for('register_courses')"}}>
+
+
+
+</form>
+
+{% endblock %}

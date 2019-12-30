@@ -1,0 +1,19 @@
+{% extends"base.html" %}    {% block content %}
+
+<h1>Please Login Here</h1>
+
+{{error}}
+
+<div>
+    <form action="{{url_for('login')}}" method="POST">
+        <input type="text" name="email" placeholder="Enter your email" size="30">
+        <br>
+        <input type="password" name="password" placeholder="Enter your password" size="30">
+        <br>
+        <input type="submit" value="Login">
+    </form>
+    <a href="{{url_for('register')}}">New Student? Register Here</a>
+</div>
+
+
+{% endblock %}

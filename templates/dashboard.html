@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block content %}
+
+<h1>Welcome {{ name }}</h1>
+<a href="{{url_for('logout')}}">Logout</a>
+<a href="{{url_for('register_courses')}}">Register Courses</a>
+<a href="{{url_for('change_password')}}">Change Password</a>
+
+<div>
+
+    <p>
+        Registration Number: {{reg_no}}
+    </p>
+
+</div>
+
+<div>
+    <p>
+        Faculty: {{faculty}}
+        Department: {{dept}}
+    </p>
+
+</div>
+
+
+
+{% endblock %}

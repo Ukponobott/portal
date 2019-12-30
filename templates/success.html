@@ -1,0 +1,26 @@
+{%  extends "base.html" %} {% block content %}
+
+<div>
+    <h1>Success</h1>
+
+    <p>
+        Dear {{name}}
+        You have successfully completed your registration
+    </p>
+
+    <h2>Login Details</h2>
+
+    <p>
+        Registration Number: {{ reg_no }}
+        <br>
+        Password: {{ password }}
+    </p>
+</div>
+
+<a href="{{url_for('login')}}">Click here to login</a>
+
+<div>
+
+</div>
+
+{% endblock %}
